@@ -42,26 +42,18 @@ public class AddressbookService {
      * Function is used to add contact record to the database
      * @param addressbook
      */
-    public void addContact(Addressbook addressbook){
-        addressbookRepository.save(addressbook);
-    }
+    public void addContact(Addressbook addressbook){ addressbookRepository.save(addressbook);  }
 
     /**
      * Updating the record in the database
      * @param addressbook
      */
 
-    public void updateContact(Addressbook addressbook){
-        addressbookRepository.save(addressbook);
-    }
+    public void updateContact(Addressbook addressbook){ addressbookRepository.save(addressbook);  }
 
     /**
      * This function is used to delete the contact record
      * @param id
      */
-    public void deleteContact(Long id){
-        addressbookRepository.deleteById(id);
-    }
-
-
+    public void deleteContact(Long id){ addressbookRepository.deleteById(id);  }
 }
