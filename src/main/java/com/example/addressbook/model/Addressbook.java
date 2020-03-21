@@ -32,6 +32,7 @@ public class Addressbook {
     @Column(name="image_name")
     private String imageName;
 
+    //Setters & getters
     public Long getId() {
         return id;
     }
