@@ -35,5 +35,9 @@ public class AddressbookService {
         addressbookRepository.save(addressbook);
     }
 
+    public void deleteContact(Long id){
+        addressbookRepository.deleteById(id);
+    }
+
 
 }

@@ -33,6 +33,10 @@ public class AddressbookController {
             addressbook.setId(id);
         addressbookService.updateContact(addressbook);
     }
+    @RequestMapping(value = "/{id}/delete",method = RequestMethod.DELETE)
+    public void deleteContact(@PathVariable Long id){
+        addressbookService.deleteContact(id);
+    }
 
 
 
