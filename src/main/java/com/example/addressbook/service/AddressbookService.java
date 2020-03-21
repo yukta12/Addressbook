@@ -27,6 +27,9 @@ public class AddressbookService {
 //        System.out.println(id);
         return addressbookRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("not found"));
     }
+    public void addContact(Addressbook addressbook){
+        addressbookRepository.save(addressbook);
+    }
 
 
 }

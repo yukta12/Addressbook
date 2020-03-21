@@ -8,6 +8,7 @@ import java.util.Date;
 
 public class Addressbook {
     @Id
+
     private Long id;
 
     @Column(name = "first_name")

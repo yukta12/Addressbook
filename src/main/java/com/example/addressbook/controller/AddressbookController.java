@@ -3,10 +3,7 @@ package com.example.addressbook.controller;
 import com.example.addressbook.model.Addressbook;
 import com.example.addressbook.service.AddressbookService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -24,6 +21,11 @@ public class AddressbookController {
         @RequestMapping(value = "/{id}",method = RequestMethod.GET)
         public Addressbook getContactById(@PathVariable Long id){
                  return addressbookService.getContactById(id);
+        }
+
+        @RequestMapping(value = "/add",method = RequestMethod.POST)
+        public void addContact(@RequestBody Addressbook addressbook){
+            addressbookService.addContact(addressbook);
         }
 
 
