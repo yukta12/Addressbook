@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface AddressbookRepository extends JpaRepository<Addressbook,String> {
+public interface AddressbookRepository extends JpaRepository<Addressbook,Long> {
 }

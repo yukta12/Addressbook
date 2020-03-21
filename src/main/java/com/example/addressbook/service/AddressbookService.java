@@ -1,9 +1,11 @@
 package com.example.addressbook.service;
 
+import com.example.addressbook.model.Addressbook;
 import com.example.addressbook.repository.AddressbookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,5 +21,12 @@ public class AddressbookService {
 
         return contacts;
     }
+
+    public Addressbook getContactById(Long id){
+//        System.out.println( addressbookRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("not found")));
+//        System.out.println(id);
+        return addressbookRepository.findById(id).orElseThrow(() -> new EntityNotFoundException("not found"));
+    }
+
 
 }
