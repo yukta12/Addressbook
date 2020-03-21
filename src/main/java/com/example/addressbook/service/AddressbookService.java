@@ -31,5 +31,9 @@ public class AddressbookService {
         addressbookRepository.save(addressbook);
     }
 
+    public void updateContact(Addressbook addressbook){
+        addressbookRepository.save(addressbook);
+    }
+
 
 }

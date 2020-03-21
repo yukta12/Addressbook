@@ -28,6 +28,14 @@ public class AddressbookController {
             addressbookService.addContact(addressbook);
         }
 
+    @RequestMapping(value = "/{id}/edit",method = RequestMethod.PATCH)
+    public void updateContact(@PathVariable Long id,@RequestBody Addressbook addressbook){
+            addressbook.setId(id);
+        addressbookService.updateContact(addressbook);
+    }
+
+
+
 
 
 
